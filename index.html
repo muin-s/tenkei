@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla Weather App Metric</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/ea0aa74a16.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app">
+ <header>The Weather Forecast in</header>
+      <h1>Shibukawa</h1>
+      <p class="time" id="time">1:00</p>
+      <small class="player" id="player"><iframe src="https://open.spotify.com/embed/playlist/6ouFe7c2VyLtHUcq3uIguP?theme=0" width="30%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe></small>
+      <h2>
+        <ul>
+          <li class="weekday" id="weekday">Today is Thursday</li>
+          <li class="humidity" id="humidity">Humidity: 69%</li>
+          <li class="wind" id="wind">Wind Speed: 2km/h</li>
+          <li class="description" id="description">Cloudy</li>
+        </ul>
+        <img 
+        src="https://openweathermap.org/img/wn/10d@2x.png"
+        alt="Cloudy"
+        class="icon"
+        id="icon"></img>
+        <main class="current" id="actualDegree">29℃</main>
+      </h2>
+      <div class="weather-forecast" id="forecast"></div>
+      <form id="search-form">
+        <input
+          type="search"
+          class="search"
+          id="searchInput"
+          placeholder="Enter your city"
+          autocomplete="off"
+          autofocus="on"
+        />
+        <button type="submit" class="btn btn-primary">Search</button>
+
+        <button
+          type="button"
+          class="btn btn-success"
+          id="current-location-button"
+        >
+          CURRENT LOCATION
+        </button>
+
+        <sup
+          ><span
+            id="celsius"
+            button
+            type="button"
+            class="btn btn-secondary btn-lg"
+            >°C</span
+          >
+          <span id="fahrenheit" type="button" class="btn btn-warning btn-lg"
+            >°F</span
+          ></sup
+        >
+      </form>
+      <p class="info">
+        This page was built and coded by
+        <a
+          href="https://www.linkedin.com/in/jasmine-tsunoda89/"
+          target="_blank"
+        >
+          Jasmine Tsunoda
+        </a>
+        using
+        <a href="https://github.com/KpopMama07/Vanilla-Weather-App" target="_blank"
+          >Open-Source Code</a
+        >
+        .
+      </p>
+      </div>
+    </div>
+    <script src="src/app.js"></script>
+  </body>
+</html>
